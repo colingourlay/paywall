@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Paywall</title>
+        <link rel="stylesheet" type="text/css" href="/styles/index.css">
+    </head>
+    <body>
+        <div id="bricks" class="Bricks"></div>
+        <div id="payment" class="Payment">
+            <form id="checkout" method="post" action="/checkout">
+                <div id="payment-form"></div>
+                <input type="hidden" id="brick-buying" name="brick-buying" />
+                <input type="submit" value="Pay $1">
+            </form>
+            <button id="cancel" class="Cancel">⊗</button>
+        </div>
+        <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+        <script src="/scripts/index.js"></script>
+    </body>
+</html>
+

@@ -1,0 +1,6 @@
+{
+    "port": 8080,
+    "braintree.merchantId": "",
+    "braintree.publicKey": "",
+    "braintree.privateKey": ""
+}

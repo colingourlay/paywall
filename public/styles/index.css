@@ -1,0 +1,125 @@
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+iframe {
+    outline: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Bricks {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.Brick {
+    box-sizing: border-box;
+    position: absolute;
+    border: 0.5rem solid black;
+    border-right-color: rgba(0,0,0,0.125);
+    border-bottom-color: rgba(0,0,0,0.125);
+    width: 13.75vw;
+    height: 11.1111vh;
+    outline: 0.5rem solid slategrey;
+    outline-offset: -0.25rem;
+    background-color: brown;
+    cursor: pointer;
+    transition: .25s background-color;
+}
+
+.Brick:nth-of-type(2n) {
+    background-color: darkred;
+}
+
+.Brick:nth-of-type(3n) {
+    background-color: darkslategrey;
+}
+
+.Brick:hover,
+.Brick.is-buying {
+    border-color: transparent;
+    background-color: rgba(127,127,127,0.5);
+    /*box-shadow: inset 0 0 0.5rem black;*/
+    z-index: 1;
+}
+
+.Brick.is-buying {
+    outline-color: gold;
+}
+
+
+.Brick::after {
+    content: "$";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: gold;
+    font-size: 3rem;
+}
+
+
+.Brick:hover::after {
+    color: #999;
+}
+
+.Brick.is-buying::after {
+    content: none;
+}
+
+.Payment {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 2;
+}
+
+.Payment form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 0.5rem;
+    background-color: white;
+}
+
+.Payment form input[type="submit"] {
+    border: none;
+    width: 100%;
+    background-color: gold;
+    font-size: 2rem;
+    line-height: 3rem;
+    cursor: pointer;
+}
+
+.Cancel {
+    position: absolute;
+    top: 0;
+    right: 0.75rem;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    color: white;
+    font-size: 3rem;
+    line-height: 1;
+    cursor: pointer;
+}
+

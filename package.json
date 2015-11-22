@@ -1,0 +1,18 @@
+{
+  "name": "paywall",
+  "version": "1.0.0",
+  "description": "A fake paywall for abc.net.au/news, with payments handled by PayPal/Braintree.",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "braintree": "^1.31.0",
+    "dion": "^1.0.2",
+    "nconf": "~0.7.1",
+    "request-data": "^1.2.0",
+    "sea-lion": "^1.0.5"
+  },
+  "author": "Colin Gourlay",
+  "license": "ITC"
+}
