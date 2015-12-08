@@ -20,7 +20,6 @@
             brickEl.style.top = (id - (id % 8)) / 8 * 11.1111 + 'vh';
             brickEl.style.left = (id % 8) * 13.75 + 'vw';
             brickEl.style.transform = 'translate(' + ((id % 16 < 8) ? '-62.5%' : '-12.5%') + ',0)';
-            // brickEl.style.marginLeft = ((id % 16 < 8) ? '-8.59375vw' : '-1.71875vw');
             brickEl.onclick = function () {
                 brickEl.className = brickEl.className + ' is-buying';
                 brickBuyingEl.value = id;

@@ -1,8 +1,8 @@
 # paywall
 
-A fake paywall for abc.net.au/news, with payments handled by PayPal/Braintree.
+A fake paywall for abc.net.au/news, with payments handled by the PayPal/Braintree sandbox.
 
 ## Get started
 
 * Copy `config.sample.json` to `config.json`
-* Update config for local env and Braintree
+* Update the things.

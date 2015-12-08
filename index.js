@@ -15,7 +15,8 @@ var blocks = {
     36: true,
     37: true,
     41: true,
-    50: true
+    50: true,
+    61: true
 };
 var longs = [];
 
@@ -69,7 +70,6 @@ router.add({
         POST: requestData(function (request, response, tokens, data) {
             gateway.transaction.sale({
                 amount: BRICK_PRICE,
-                // paymentMethodNonce: data.payment_method_nonce,
                 paymentMethodNonce: 'fake-valid-nonce',
                 options: {
                     submitForSettlement: true
