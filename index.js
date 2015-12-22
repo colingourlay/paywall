@@ -82,7 +82,7 @@ router.add({
                 }
 
                 response.statusCode = 301;
-                response.setHeader('Location', '/');
+                response.setHeader('Location', request.headers.referer);
                 response.end();
             });
         })
