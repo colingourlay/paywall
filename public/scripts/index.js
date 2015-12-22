@@ -67,11 +67,11 @@
         client.send(JSON.stringify(data));
     }
 
-    xhr('GET', '/init', {}, function (data) {
+    xhr('GET', 'init', {}, function (data) {
         data.forEach(boughtBrick);
 
         function poll() {
-            xhr('GET', '/long', {}, function (data) {
+            xhr('GET', 'long', {}, function (data) {
                 data.forEach(boughtBrick);
                 poll();
             });
